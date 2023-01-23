@@ -1,0 +1,10 @@
+{
+  "registrationHost": "OU=DAB Sandbox Node 1, O=Fifth-9 Limited UK, L=London, ST=London, C=GB",
+  "gdspOAuthClientUsername": "VGEIOTPRODSOL_NP",
+  "gdspOAuthClientPassword": "DerPoschke2021",
+  "gdspCsp": "VGEIOTPRODSOL_NF_CSP",
+  "name": "testname364151",
+  "alternativeIds": [
+    "dab:organisation:test364151"
+  ]
+}
