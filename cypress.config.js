@@ -8,7 +8,21 @@ module.exports = defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+     // const cucumber = require('cypress-cucumber-preprocessor').default
+     // const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
+    
+      module.exports = (on, config) => {
+        //on('file:preprocessor', preprocessor())
+      }
+    
     },
+    //experimentalStudio: true,
+    experimentalOriginDependencies: true
+  //  specPattern:"CypressDAB\\cypress\\e2e\\test\\Login.feature",
+   
   },
+  
+   
+  
+  
 });
