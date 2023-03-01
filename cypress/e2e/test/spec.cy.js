@@ -1,9 +1,10 @@
 import RandomGenerator from "../POM/Token gerernation";
 import LoginPage from "../POM/loginpage";
 import Authenticatepage from "../POM/authenticatepage";
+import { Given } from "./login";
 
 //describe('API Test', () => {
-  
+ 
  before(() => {
   const RandomG = new RandomGenerator();
     // generate a random 
@@ -67,23 +68,17 @@ import Authenticatepage from "../POM/authenticatepage";
     
   })
   it('Loginpage', function () {
-    const loginP = new LoginPage();
+
+    const loginPage = new LoginPage();
+
     cy.visit(Cypress.env('Bt3TestSP'));
-    loginP.getloginButton().click();
-    const AuthPage = new Authenticatepage();
-    //console.log(typeof homePage.getPassword); // function
-    //console.log(homePage instanceof Homepage); // true
-
-   // cy.origin('https://xb.pre.idp.vodafone.com', { args: {AutheicPage: AuthPage , username: this.regdata.Email, password: this.regdata.Password } }, ({ AutheicPage,username, password }) => {
-        cy.get('#email').type("frahhh");
-      
-       // console.log("testttttttt"+typeof AutheicPage.getPassword); // function
-        cy.get('#current-password').type("hn");
-        cy.get('#authenticate').click();
+    loginPage.getloginButton().click();
+    const authenticatePage = new Authenticatepage('https://xb.pre.idp.vodafone.com')
+     console.log(typeof this.regdata.Email);
+        authenticatePage.getEmail(this.regdata.Email)
+        authenticatePage.getPassword(this.regdata.Password)
+        authenticatePage.continueButton()
    
-     //})
-
-     
     cy.get('.Loading_label__sVQXv').should('exist')
      cy.wait(40000);
           cy.get('#\\:rc\\:').should('exist')

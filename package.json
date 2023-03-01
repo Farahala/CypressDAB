@@ -11,13 +11,16 @@
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^11.5.1",
-    "cypress": "^12.3.0"
+    "@cypress/webpack-preprocessor": "^5.17.0",
+    "cypress": "^12.3.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "webpack": "^5.75.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true ,
+    "stepDefinitions": "cypress/e2e/test/login.js"
   },
   "dependencies": {
-    "@cypress/webpack-preprocessor": "^5.16.3",
     "fake": "^0.2.2"
   }
 }
