@@ -8,6 +8,12 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+Cypress.Commands.add('appendDataToFixtureFile', (data, fixtureFile = 'example') => {
+    const path = `cypress/fixtures/${fixtureFile}.json`;
+    cy.readFile(path).then((file) => {
+      cy.writeFile(path, { ...file, ...data });
+    });
+  });
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })

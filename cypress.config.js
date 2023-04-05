@@ -31,6 +31,9 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     env: {
       allureReuseAfterSpec: true,
+      Bt3TestUAM: 'https://uam-fe-bt3-test.digital-asset-broker.com/',
+      Bt3TestSP:"https://support-bt3-test.digital-asset-broker.com/login",
+      Bt3DevSP:"https://support-bt3-dev.digital-asset-broker.com/login"
     },
   },
 });
